@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+
+      <!-- Nuget properties -->
+      <AssemblyVersion>1.0</AssemblyVersion>
+      <FileVersion>1.0</FileVersion>
+      <VersionPrefix>1.0</VersionPrefix>
+      <Authors>southpolenator</Authors>
+      <PackageLicenseUrl>https://github.com/southpolenator/ComInterfaces/blob/master/LICENSE</PackageLicenseUrl>
+      <PackageProjectUrl>https://github.com/southpolenator/ComInterfaces</PackageProjectUrl>
+      <PackageTags>DIA;MSDIA;DIA SDK</PackageTags>
+      <IncludeSymbols>True</IncludeSymbols>
+      <IncludeSource>True</IncludeSource>
+      <RepositoryUrl>https://github.com/southpolenator/ComInterfaces.git</RepositoryUrl>
+      <RepositoryType>git</RepositoryType>
+      <Description>Includes COM interfaces for working with DIA library (for reading PDB files).</Description>
+  </PropertyGroup>
+
+</Project>
