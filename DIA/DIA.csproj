@@ -5,9 +5,9 @@
     <AssemblyOriginatorKeyFile>ComInterfaces.snk</AssemblyOriginatorKeyFile>
 
     <!-- Nuget properties -->
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <FileVersion>1.0.1</FileVersion>
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <FileVersion>1.0.2</FileVersion>
+    <VersionPrefix>1.0.2</VersionPrefix>
     <Authors>southpolenator</Authors>
     <PackageLicenseUrl>https://github.com/southpolenator/ComInterfaces/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/southpolenator/ComInterfaces</PackageProjectUrl>
