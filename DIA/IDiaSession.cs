@@ -173,9 +173,9 @@ namespace DIA
         /// </summary>
         /// <param name="symbolA">The first <see cref="IDiaSymbol"/> object used in the comparison. </param>
         /// <param name="symbolB">The second <see cref="IDiaSymbol"/> object used in the comparison.</param>
-        /// <returns>If the symbols are equivalent, returns S_OK; otherwise, returns S_FALSE, the symbols are not equivalent. Otherwise, return an error code.</returns>
+        /// <returns>If the symbols are equivalent, returns <see cref="HResult.S_OK"/>; otherwise, returns <see cref="HResult.S_FALSE"/>, the symbols are not equivalent. Otherwise, return an error code.</returns>
         [PreserveSig]
-        int symsAreEquiv(
+        HResult symsAreEquiv(
             [In, MarshalAs(UnmanagedType.Interface)] IDiaSymbol symbolA,
             [In, MarshalAs(UnmanagedType.Interface)] IDiaSymbol symbolB);
 
@@ -430,9 +430,9 @@ namespace DIA
         /// <param name="va">Specifies the virtual address of the address to obtain.</param>
         /// <param name="pISect">Returns the section component of the address.</param>
         /// <param name="pOffset">Returns the offset component of the address.</param>
-        /// <returns>If successful, returns S_OK; otherwise, returns an error code.</returns>
+        /// <returns>If successful, returns <see cref="HResult.S_OK"/>; otherwise, returns an error code.</returns>
         [PreserveSig]
-        int addressForVA(
+        HResult addressForVA(
             [In] ulong va,
             [Out] out uint pISect,
             [Out] out uint pOffset);
@@ -443,9 +443,9 @@ namespace DIA
         /// <param name="rva">Specifies the relative virtual address of the address to obtain.</param>
         /// <param name="pISect">Returns the section component of the address.</param>
         /// <param name="pOffset">Returns the offset component of the address.</param>
-        /// <returns>If successful, returns S_OK; otherwise, returns an error code.</returns>
+        /// <returns>If successful, returns <see cref="HResult.S_OK"/>; otherwise, returns an error code.</returns>
         [PreserveSig]
-        int addressForRVA(
+        HResult addressForRVA(
             [In] uint rva,
             [Out] out uint pISect,
             [Out] out uint pOffset);

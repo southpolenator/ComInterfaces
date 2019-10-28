@@ -23,9 +23,9 @@ namespace DIA
         /// <param name="cbData">Size of the data buffer, in bytes.</param>
         /// <param name="pcbData">Returns the number of bytes returned. If data is <c>null</c>, then pcbData contains the total number of bytes of data available.</param>
         /// <param name="pbData">A buffer that is to be filled in with data from the specified location.</param>
-        /// <returns>If successful, returns S_OK; otherwise, returns an error code.</returns>
+        /// <returns>If successful, returns <see cref="HResult.S_OK"/>; otherwise, returns an error code.</returns>
         [PreserveSig]
-        int readMemory(
+        HResult readMemory(
             [In] MemoryTypeEnum type,
             [In] ulong va,
             [In] uint cbData,
@@ -37,9 +37,9 @@ namespace DIA
         /// </summary>
         /// <param name="frame">An <see cref="IDiaFrameData"/> object that represents the current stack frame.</param>
         /// <param name="returnAddress">Returns the nearest function return address.</param>
-        /// <returns>If successful, returns S_OK; otherwise, returns an error code.</returns>
+        /// <returns>If successful, returns <see cref="HResult.S_OK"/>; otherwise, returns an error code.</returns>
         [PreserveSig]
-        int searchForReturnAddress(
+        HResult searchForReturnAddress(
             [In, MarshalAs(UnmanagedType.Interface)] IDiaFrameData frame,
             [Out] out ulong returnAddress);
 
@@ -49,9 +49,9 @@ namespace DIA
         /// <param name="frame">An <see cref="IDiaFrameData"/> object that represents the current stack frame.</param>
         /// <param name="startAddress">A virtual memory address from which to begin searching.</param>
         /// <param name="returnAddress">Returns the nearest function return address to startAddress.</param>
-        /// <returns>If successful, returns S_OK; otherwise, returns an error code.</returns>
+        /// <returns>If successful, returns <see cref="HResult.S_OK"/>; otherwise, returns an error code.</returns>
         [PreserveSig]
-        int searchForReturnAddressStart(
+        HResult searchForReturnAddressStart(
             [In, MarshalAs(UnmanagedType.Interface)] IDiaFrameData frame,
             [In] ulong startAddress,
             [Out] out ulong returnAddress);
