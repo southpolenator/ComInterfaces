@@ -10,10 +10,26 @@ namespace DIA
     public interface IDiaStackWalkHelper
     {
         /// <summary>
-        /// Gets or sets the value of a register.
+        /// Gets the value of a register.
         /// </summary>
-        [DispId(1)]
-        ulong registerValue { get; set; }
+        /// <param name="register">A value from the <see cref="CV_HREG_e"/> enumeration specifying which register to get the value from.</param>
+        /// <param name="value">Returns the current value of the register.</param>
+        /// <returns>If successful, returns S_OK; otherwise, returns an error code.</returns>
+        [PreserveSig]
+        int get_registerValue(
+            [In] CV_HREG_e register,
+            [Out] out ulong value);
+
+        /// <summary>
+        /// Sets the value of a register.
+        /// </summary>
+        /// <param name="register">A value from the <see cref="CV_HREG_e"/> enumeration specifying which register to write to.</param>
+        /// <param name="value">The new register value.</param>
+        /// <returns>If successful, returns S_OK; otherwise, returns an error code.</returns>
+        [PreserveSig]
+        int put_registerValue(
+            [In] CV_HREG_e register,
+            [In] ulong value);
 
         /// <summary>
         /// Reads a block of data from the executable's image in memory.
