@@ -18,6 +18,14 @@
     <RepositoryType>git</RepositoryType>
     <Description>Includes COM interfaces for working with DIA library (for reading PDB files).</Description>
     <SignAssembly>true</SignAssembly>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
 
 </Project>
