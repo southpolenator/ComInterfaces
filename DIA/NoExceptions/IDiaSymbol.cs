@@ -766,7 +766,7 @@ namespace DIA.NoExceptions
         /// Retrieves the type of the target CPU.
         /// </summary>
         [DispId(88)]
-        uint machineType { get; }
+        MachineType machineType { get; }
 
         /// <summary>
         /// Retrieves the symbol's oemId value.
@@ -818,7 +818,7 @@ namespace DIA.NoExceptions
         /// Retrieves the variety of a user-defined type (UDT).
         /// </summary>
         [DispId(92)]
-        uint udtKind { get; }
+        UdtKind udtKind { get; }
 
         /// <summary>
         /// Retrieves part or all of an undecorated name for a C++ decorated (linkage) name.
